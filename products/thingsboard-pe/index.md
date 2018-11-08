@@ -1,366 +1,113 @@
 ---
 layout: thingsboard-pe
 title: ThingsBoard Professional Edition
-description: 
-redirect_from: "/partners/"
+description: null
+redirect_from: /partners/
 ---
+
+# index
 
 ## Advanced ThingsBoard IoT Platform distribution with value added features
 
-<section class="oceanNodes pe-features">
-    <main>
-        <div class="image-wrapper"><img src="/images/pe/white-labeling.svg"></div>
-        <div class="content">
-            <h3>White-labeling</h3>
-            <p>Rebrand ThingsBoard platform web interface with your company or product logo and color scheme in 2 minutes. No coding or service restart required.  
-            Allow your customers and their sub-customers to white-label their interface as well.</p>
-            <br/>
-            <p><a href="/docs/user-guide/white-labeling/" class="button">Read more</a></p>
-        </div>
-    </main>
-    <main>
-        <div class="image-wrapper"><img src="/images/pe/platform-integrations.svg"></div>
-        <div class="content">
-            <h3>Platform Integrations</h3>
-            <p>Stream data from devices connected to existing IoT Platforms to enable real-time interactive dashboards and efficient data processing.
-            Connect NB IoT, LoRaWAN and SigFox devices with specific payload formats using highly customizable data converters. Design and plugin your own converter as a JavaScript functions in real-time.</p>
-            <br/>
-            <p><a href="/docs/user-guide/integrations/" class="button">Read more</a></p>
-        </div>
-    </main>
-    <main>
-        <div class="image-wrapper"><img src="/images/pe/device-asset-groups.svg"></div>
-        <div class="content">
-            <h3>Device & Asset Groups</h3>
-            <p>Group your assets and devices to simplify administration tasks. Customize set of columns for each group and trigger actions on devices directly from administration interface.</p>
-            <br/>
-            <p><a href="/docs/user-guide/groups/" class="button">Read more</a></p>
-        </div>
-    </main>
-    <main>
-        <div class="image-wrapper"><img src="/images/pe/scheduler-banner.svg"></div>
-        <div class="content">
-            <h3>Scheduler</h3>
-            <p>Schedule various types of events including report generation, commands to devices and configuration updates with flexible schedule configuration.</p>
-            <br/>
-            <p><a href="/docs/user-guide/scheduler/" class="button">Read more</a></p>
-        </div>
-    </main>
-    <main>
-        <div class="image-wrapper"><img src="/images/pe/reporting-banner.svg"></div>
-        <div class="content">
-            <h3>Reporting</h3>
-            <p>Generate great looking reports using dashboards visualization capabilities. Generate reports by schedule or export by demand.</p>
-            <br/>
-            <p><a href="/docs/user-guide/reporting/" class="button">Read more</a></p>
-        </div>
-    </main>
-    <main>
-        <div class="image-wrapper"><img src="/images/pe/csv-xls-data-export.svg"></div>
-        <div class="content">
-            <h3>CSV/XLS data export</h3>
-            <p>Export any dashboard widget data to CSV or XLS format. Allow your customers to download valuable insights from their device's data and review them in offline mode.</p>
-            <br/>
-            <p><a href="/docs/user-guide/csv-xls-data-export/" class="button">Read more</a></p>
-        </div>
-    </main>
-</section>
+![](../../.gitbook/assets/white-labeling.svg)
+
+### White-labeling
+
+Rebrand ThingsBoard platform web interface with your company or product logo and color scheme in 2 minutes. No coding or service restart required. Allow your customers and their sub-customers to white-label their interface as well.  
+
+
+[Read more](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/white-labeling/README.md)![](../../.gitbook/assets/platform-integrations.svg)
+
+### Platform Integrations
+
+Stream data from devices connected to existing IoT Platforms to enable real-time interactive dashboards and efficient data processing. Connect NB IoT, LoRaWAN and SigFox devices with specific payload formats using highly customizable data converters. Design and plugin your own converter as a JavaScript functions in real-time.  
+
+
+[Read more](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/integrations/README.md)![](../../.gitbook/assets/device-asset-groups.svg)
+
+### Device & Asset Groups
+
+Group your assets and devices to simplify administration tasks. Customize set of columns for each group and trigger actions on devices directly from administration interface.  
+
+
+[Read more](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/groups/README.md)![](../../.gitbook/assets/scheduler-banner.svg)
+
+### Scheduler
+
+Schedule various types of events including report generation, commands to devices and configuration updates with flexible schedule configuration.  
+
+
+[Read more](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/scheduler/README.md)![](../../.gitbook/assets/reporting-banner.svg)
+
+### Reporting
+
+Generate great looking reports using dashboards visualization capabilities. Generate reports by schedule or export by demand.  
+
+
+[Read more](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/reporting/README.md)![](../../.gitbook/assets/csv-xls-data-export.svg)
+
+### CSV/XLS data export
+
+Export any dashboard widget data to CSV or XLS format. Allow your customers to download valuable insights from their device's data and review them in offline mode.  
+
+
+[Read more](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/csv-xls-data-export/README.md)
 
 ## Customers
 
-<section id="pe-customers">
-    <main class="customers-container">
-		<div class="customer-block">
-			<a href="https://www.bosch.com/">
-				<span>
-					<div class="customer-logo" style="height:134px">
-						<img width="" src="/images/customers/bosch.png" alt="Robert Bosch GmbH">
-					 </div>
-				</span>
-			</a>
-		</div>
-        <div class="customer-block">
-            <a href="http://www.engie.sk/en/kontakt">
-				<span>
-					<div class="customer-logo" style="height:134px">
-						<img width="" src="/images/customers/engie.png" alt="ENGIE Services a.s.">
-					 </div>
-				</span>
-            </a>
-        </div>
-		<div class="customer-block">
-			<a href="/industries/telecom/#tektelic">
-				<span>
-					<div class="customer-logo" style="height:134px">
-						<img width="" src="/images/customers/tektelic.png" alt="TEKTELIC Communications Inc.">
-					 </div>
-				</span>
-			</a>
-		</div>
-		<div class="customer-block">
-			<a href="/industries/smart-energy/#oneserve">
-				<span>
-					<div class="customer-logo" style="height:134px">
-						<img width="" src="/images/customers/oneserve.svg" alt="Oneserve Limited">
-					 </div>
-				</span>
-			</a>
-		</div>
-		<div class="customer-block">
-			<a href="/industries/smart-energy/#nettra">
-				<span>
-					<div class="customer-logo" style="height:134px">
-						<img width="" src="/images/customers/nettra.png" alt="Nettra">
-					 </div>
-				</span>
-			</a>
-		</div>
-		<div class="customer-block">
-			<a href="/industries/agriculture/#enviroeye">
-				<span>
-					<div class="customer-logo" style="height:134px">
-						<img width="" src="/images/customers/enviroeye.png" alt="Enviroeye">
-					 </div>
-				</span>
-			</a>
-		</div>
-        <div class="customer-block">
-            <a href="/industries/smart-buildings#sensolyze">
-				<span>
-					<div class="customer-logo" style="height:134px">
-						<img width="" src="/images/customers/sensolyze.png" alt="Sensolyze GmbH">
-					 </div>
-				</span>
-            </a>
-        </div>
-		<div class="customer-block">
-			<a href="/industries/smart-city#conbee">
-				<span>
-					<div class="customer-logo" style="height:134px">
-						<img width="" src="/images/customers/conbee.svg" alt="Conbee GmbH">
-					 </div>
-				</span>
-			</a>
-		</div>
-        <div class="customer-block">
-            <a href="/industries/smart-energy#environmental-energy-controls">
-                <span>
-                    <div class="customer-logo" style="height:134px">
-                        <img width="" src="/images/customers/e2c.png" alt="Environmental Energy Controls">
-                     </div>
-                </span>
-            </a>
-        </div>
-        <div class="customer-block">
-            <a href="/industries/smart-city#x-telia">
-                <span>
-                    <div class="customer-logo" style="height:134px">
-                        <img width="" src="/images/customers/x-telia.png" alt="X-TELIA">
-                     </div>
-                </span>
-            </a>
-        </div>
-    </main>
-</section>    
+[ ![Robert Bosch GmbH](../../.gitbook/assets/bosch.png)](https://www.bosch.com/)[ ![ENGIE Services a.s.](../../.gitbook/assets/engie.png)](http://www.engie.sk/en/kontakt)[ ![TEKTELIC Communications Inc.](../../.gitbook/assets/tektelic.png)](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/industries/telecom/README.md#tektelic)[ ![Oneserve Limited](../../.gitbook/assets/oneserve.svg)](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/industries/smart-energy/README.md#oneserve)[ ![Nettra](../../.gitbook/assets/nettra.png)](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/industries/smart-energy/README.md#nettra)[ ![Enviroeye](../../.gitbook/assets/enviroeye.png)](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/industries/agriculture/README.md#enviroeye)[ ![Sensolyze GmbH](../../.gitbook/assets/sensolyze.png)](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/industries/smart-buildings/README.md#sensolyze)[ ![Conbee GmbH](../../.gitbook/assets/conbee%20%281%29.svg)](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/industries/smart-city/README.md#conbee)[ ![Environmental Energy Controls](../../.gitbook/assets/e2c.png)](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/industries/smart-energy/README.md#environmental-energy-controls)[ ![X-TELIA](../../.gitbook/assets/x-telia%20%281%29.png)](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/industries/smart-city/README.md#x-telia)
 
 ## Feature Comparison Matrix
 
-<div id="feature-comparison">
-    <table>
-        <thead>
-            <tr>
-                <th></th>
-                <th><div class="product-header">ThingsBoard<br/>Community Edition</div></th>
-                <th></th>
-                <th><div class="product-header">ThingsBoard<br/>Professional Edition</div></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Asset management & Data collection</td>
-                <td class="checked"></td>
-                <td></td>
-                <td class="checked"></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>End-user real-time dashboards</td>
-                <td class="checked"></td>
-                <td></td>
-                <td class="checked"></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Customizable rule chains, widgets</td>
-                <td class="checked"></td>
-                <td></td>
-                <td class="checked"></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>MQTT, HTTP, CoAP, OPC-UA transport</td>
-                <td class="checked"></td>
-                <td></td>
-                <td class="checked"></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>Integrations with BigData systems</td>
-                <td class="checked"></td>
-                <td></td>
-                <td class="checked"></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>NB-IoT, SigFox, LoRaWAN support</td>
-                <td>Basic</td>
-                <td></td>
-                <td>Advanced</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><a class="feature-link" href="/docs/user-guide/rule-engine-2-0/architecture/#message-queue">Rule Engine: Components<span class="info"></span></a></td>
-                <td>Basic</td>
-                <td></td>
-                <td>Advanced</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><a class="feature-link" href="/docs/user-guide/rule-engine-2-0/overview/">Rule Engine: Persistent Message Queue <span class="info"></span></a></td>
-                <td class="unchecked"></td>
-                <td></td>
-                <td class="checked"></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><a class="feature-link" href="/docs/user-guide/groups/">Device, assets and customer <span class="info">groups</span></a></td>
-                <td class="unchecked"></td>
-                <td></td>
-                <td class="checked"></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><a class="feature-link" href="/docs/user-guide/scheduler/"><span class="info">Scheduler</span></a></td>
-                <td class="unchecked"></td>
-                <td></td>
-                <td class="checked"></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><a class="feature-link" href="/docs/user-guide/reporting/"><span class="info">Reporting</span></a></td>
-                <td class="unchecked"></td>
-                <td></td>
-                <td class="checked"></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><a class="feature-link" href="/docs/user-guide/white-labeling/">Multi-tenant configurable <span class="info">white-labeling</span></a></td>
-                <td class="unchecked"></td>
-                <td></td>
-                <td class="checked"></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><a class="feature-link" href="/docs/user-guide/csv-xls-data-export/">CSV/XLS data <span class="info">export</span></a></td>
-                <td class="unchecked"></td>
-                <td></td>
-                <td class="checked"></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><a class="feature-link" href="/docs/user-guide/integrations/">Platform <span class="info">Integrations</span></a></td>
-                <td class="unchecked"></td>
-                <td></td>
-                <td class="checked"></td>
-                <td></td>
-            </tr>
-        </tbody>
-    </table>            
-</div>
+|  | ThingsBoard Community Edition |  | ThingsBoard Professional Edition |  |
+| :--- | :--- | :--- | :--- | :--- |
+|  |  |  |  |  |
+| Asset management & Data collection |  |  |  |  |
+| End-user real-time dashboards |  |  |  |  |
+| Customizable rule chains, widgets |  |  |  |  |
+| MQTT, HTTP, CoAP, OPC-UA transport |  |  |  |  |
+| Integrations with BigData systems |  |  |  |  |
+| NB-IoT, SigFox, LoRaWAN support | Basic |  | Advanced |  |
+| [Rule Engine: Components](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/rule-engine-2-0/architecture/README.md#message-queue) | Basic |  | Advanced |  |
+| [Rule Engine: Persistent Message Queue](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/rule-engine-2-0/overview/README.md) |  |  |  |  |
+| [Device, assets and customer groups](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/groups/README.md) |  |  |  |  |
+| [Scheduler](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/scheduler/README.md) |  |  |  |  |
+| [Reporting](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/reporting/README.md) |  |  |  |  |
+| [Multi-tenant configurable white-labeling](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/white-labeling/README.md) |  |  |  |  |
+| [CSV/XLS data export](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/csv-xls-data-export/README.md) |  |  |  |  |
+| [Platform Integrations](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/integrations/README.md) |  |  |  |  |
 
-<section class="oceanNodes pe-features">
-    <main>
-        <div class="image-wrapper"><img src="/images/pe/cloud-providers.svg"></div>
-        <div class="content">
-            <h3>Flexible deployment options</h3>
-            <p>Deploy ThingsBoard platform in the cloud or on premises. Use commodity hardware to scale out horizontally by adding new nodes to your cluster.  
-            Single ThingsBoard server can support 10 000+ devices and 100M messages per hour, while simple cluster can support millions of devices and billions of messages.</p>
-        </div>
-    </main>
-    <main>
-        <div class="image-wrapper"><img src="/images/pe/pricing-options.svg"></div>
-        <div class="content">
-            <h3>Simple and predictable pricing models</h3>
-            <p>Say "No!" to per message or per device pricing that turns to a monster bills in production system.
-            ThingsBoard PE supports two simple and predictable pricing models depending on your product life-cycle stage.</p>
-        </div>
-    </main>
-</section>
-<br/>
-<br/>
-<section id="pricing-models-cards">
-    <main id="cloud-pricing">
-		<div class="content">
-			<div class="content-block pb-0x">
-				<h3 class="content-title">Pay as you go</h3>
-			</div>
-			<div class="content-block pb-0x">
-				<h4>Install ThingsBoard PE in two minutes on the AWS or Azure cloud and pay hourly rate per server only when you use the platform. Best suite for early evaluation phase or PoCs.</h4>
-			</div>
-			<div style="flex: 1;"></div>
-			<div class="content-block">
-			    <div class="marketplace">
-                    <div class="pricing-image-wrapper">
-                        <img src="/images/pe/aws_logo.svg">
-                    </div>
-                    <div class="pricing-image-wrapper">
-                        <img src="/images/pe/azure_logo.svg">
-                    </div>
-			    </div>
-			</div>
-			<div class="center content-block deploy-buttons">
-				<p><a href="/products/thingsboard-pe/install/?deploy=cloud" class="button">Pay as you go</a></p>
-				<p><a href="/products/thingsboard-pe/install/?deploy=trial" class="button">Free trial</a></p>
-			</div>
-        </div>
-    </main>
-    <main id="on-premise-pricing">
-		<div class="content">
-			<div class="content-block pb-0x">
-				<h3 class="content-title">Pay yearly</h3>
-			</div>
-			<div class="content-block pb-0x">
-				<h4>Install ThingsBoard PE on any cloud or on premises and pay one-time license fee per server and optional software updates subscription for subsequent years of usage. 
-				Save up to 40% comparing to pay-as-you-go per hour rate on the license fee.</h4>
-			</div>
-			<div style="flex: 1;"></div>
-			<div class="content-block">
-			    <div class="pricing-image-wrapper">
-			        <img src="/images/pe/premise-deployment.svg">
-			    </div>
-			</div>
-			<div class="center content-block deploy-buttons">
-				<p><a href="/products/thingsboard-pe/install/?deploy=premise" class="button">Pay yearly</a></p>
-				<p><a href="/products/thingsboard-pe/install/?deploy=trial" class="button">Free trial</a></p>
-			</div>
-        </div>
-    </main>
-</section>
+![](../../.gitbook/assets/cloud-providers.svg)
 
-<br/>
-<br/>
+### Flexible deployment options
 
-<p align="center">
-    <a href="/products/thingsboard-pe/install/?deploy=trial" class="button try-pe">Try it now</a>
-</p>
+Deploy ThingsBoard platform in the cloud or on premises. Use commodity hardware to scale out horizontally by adding new nodes to your cluster. Single ThingsBoard server can support 10 000+ devices and 100M messages per hour, while simple cluster can support millions of devices and billions of messages.![](../../.gitbook/assets/pricing-options.svg)
 
-<br/>
-<br/>
+### Simple and predictable pricing models
+
+Say "No!" to per message or per device pricing that turns to a monster bills in production system. ThingsBoard PE supports two simple and predictable pricing models depending on your product life-cycle stage.  
+  
+
+
+### Pay as you go
+
+#### Install ThingsBoard PE in two minutes on the AWS or Azure cloud and pay hourly rate per server only when you use the platform. Best suite for early evaluation phase or PoCs.
+
+ ![](../../.gitbook/assets/aws_logo.svg) ![](../../.gitbook/assets/azure_logo.svg)
+
+[Pay as you go](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/products/thingsboard-pe/install/?deploy=cloud/README.md)
+
+[Free trial](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/products/thingsboard-pe/install/?deploy=trial/README.md)
+
+### Pay yearly
+
+#### Install ThingsBoard PE on any cloud or on premises and pay one-time license fee per server and optional software updates subscription for subsequent years of usage. Save up to 40% comparing to pay-as-you-go per hour rate on the license fee.
+
+![](../../.gitbook/assets/premise-deployment.svg)
+
+[Pay yearly](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/products/thingsboard-pe/install/?deploy=premise/README.md)
+
+[Free trial](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/products/thingsboard-pe/install/?deploy=trial/README.md)
+
+ [Try it now](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/products/thingsboard-pe/install/?deploy=trial/README.md)
+

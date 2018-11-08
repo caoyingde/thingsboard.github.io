@@ -1,5 +1,4 @@
-### Memory update for slow machines (1GB of RAM)
+# Memory update for slow machines \(1GB of RAM\)
 
-We recommend to use embedded HSQLDB or PostgreSQL DB in this setup. 
-We don't recommend to use Cassandra on machines with less then 4GB of RAM.
+We recommend to use embedded HSQLDB or PostgreSQL DB in this setup. We don't recommend to use Cassandra on machines with less then 4GB of RAM.
 

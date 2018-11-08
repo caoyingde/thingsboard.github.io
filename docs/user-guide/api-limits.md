@@ -2,27 +2,30 @@
 layout: docwithnav
 title: API Limits
 description: Configuring API Limits
-
 ---
 
-API Limits feature allows controlling API usage, by limiting number of requests from single host during single time unit (Minutes, Hours, etc.) 
+# api-limits
+
+API Limits feature allows controlling API usage, by limiting number of requests from single host during single time unit \(Minutes, Hours, etc.\)
 
 API limits are **disabled by default**.
 
-After enabling this feature, for each host, Thingsboard will count incoming requests. 
-After requests limit is reached for the current interval for the host, Thingsboard will not accept incoming requests from this host. 
-Responce depends on the type of the transport layer:
-- **HTTP/HTTPS** - http status code 509 (Bandwidth Limit Exceeded) 
-- **MQTT** - disconnect
-- **CoAP** - responce code 128 (Bad request)  
+After enabling this feature, for each host, Thingsboard will count incoming requests. After requests limit is reached for the current interval for the host, Thingsboard will not accept incoming requests from this host. Responce depends on the type of the transport layer:
+
+* **HTTP/HTTPS** - http status code 509 \(Bandwidth Limit Exceeded\) 
+* **MQTT** - disconnect
+* **CoAP** - responce code 128 \(Bad request\)  
 
 ### White/Black List
-It is possible to configure different policy lists for API Limits: 
-- **white-list** - all requests from hosts that are on this list will not be counted
-- **black-list** - all requests from hosts that are on this list will be discarded 
+
+It is possible to configure different policy lists for API Limits:
+
+* **white-list** - all requests from hosts that are on this list will not be counted
+* **black-list** - all requests from hosts that are on this list will be discarded 
 
 ### General configuration
-System administrator is able to configure Api Limits using [thingsboard.yml](/docs/user-guide/install/config/). You can find sample configuration below:
+
+System administrator is able to configure Api Limits using [thingsboard.yml](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/install/config/README.md). You can find sample configuration below:
 
 ```yaml
 quota:
@@ -46,12 +49,10 @@ quota:
     intervalMin: 2
 ```
 
-This configuration sample enables API Limiting and accepts only 10000 requests from one host during 60 seconds.
-Other requests from same host in this time interval would be rejected. 
+This configuration sample enables API Limiting and accepts only 10000 requests from one host during 60 seconds. Other requests from same host in this time interval would be rejected.
 
-- Requests from localhost and from 127.0.0.1 are not limited.
-- All requests from eveldomain.com are rejected.
+* Requests from localhost and from 127.0.0.1 are not limited.
+* All requests from eveldomain.com are rejected.
 
 ## Next steps
 
-{% assign currentGuide = "AdvancedFeatures" %}{% include templates/guides-banner.md %}

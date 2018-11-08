@@ -2,61 +2,53 @@
 layout: docwithnav
 title: SigFox IoT data collection and visualization
 description: SigFox IoT data collection and visualization using ThingsBoard IoT Gateway
-
 ---
 
+# sigfox-iot-data-visualization
+
 * TOC
-{:toc}
 
-### Overview
+  {:toc}
 
-![Sigfox gateway integration](/images/gateway/sigfox/sigfox-gateway-integration.svg)
+## Overview
 
-Sigfox is low-cost, low energy consumption connectivity solution that allows collecting a relatively small amount of data from your IoT devices.
-Sigfox Backend allows provisioning custom callbacks and pushing data to your server applications. We will use this feature to push data to ThingsBoard IoT Gateway.
-The Gateway will take care of routing tasks: convert data to unified format, device provisioning, data delivery, etc.
-Once data is delivered to ThingsBoard we will be able to see it on advanced real-time IoT dashboards and share these IoT dashboards with end-users.
- 
-### Prerequisites 
+![Sigfox gateway integration](../../.gitbook/assets/sigfox-gateway-integration.svg)
 
- - **ThingsBoard**. We assume you already have access to ThingsBoard instance.
-You can use either our [**live demo**](/docs/user-guide/live-demo/) server or install your own ThingsBoard instance using one of the [**installation options**](/docs/user-guide/install/installation-options/).
+Sigfox is low-cost, low energy consumption connectivity solution that allows collecting a relatively small amount of data from your IoT devices. Sigfox Backend allows provisioning custom callbacks and pushing data to your server applications. We will use this feature to push data to ThingsBoard IoT Gateway. The Gateway will take care of routing tasks: convert data to unified format, device provisioning, data delivery, etc. Once data is delivered to ThingsBoard we will be able to see it on advanced real-time IoT dashboards and share these IoT dashboards with end-users.
 
- - **ThingsBoard IoT Gateway**. We also assume you already installed ThingsBoard IoT Gateway using one of the [**installation options**](/docs/iot-gateway/installation/) and [**provisioned**](/docs/iot-gateway/getting-started/#step-3-gateway-provisioning) it within your ThingsBoard instance.
-  
- - **Sigfox**. We also expect you have your Sigfox devices registered in Sigfox Backend.
- 
+## Prerequisites
+
+* **ThingsBoard**. We assume you already have access to ThingsBoard instance. You can use either our [**live demo**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/live-demo/README.md) server or install your own ThingsBoard instance using one of the [**installation options**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/install/installation-options/README.md).
+* **ThingsBoard IoT Gateway**. We also assume you already installed ThingsBoard IoT Gateway using one of the [**installation options**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/iot-gateway/installation/README.md) and [**provisioned**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/iot-gateway/getting-started/README.md#step-3-gateway-provisioning) it within your ThingsBoard instance.
+* **Sigfox**. We also expect you have your Sigfox devices registered in Sigfox Backend.
+
 **NOTE**: Both ThingsBoard and ThingsBoard IoT Gateway need to be installed in the cloud to be accessible by Sigfox Gateway.
 
-### Sigfox configuration steps
+## Sigfox configuration steps
 
-#### Step 1. Configure UPLINK callback
+### Step 1. Configure UPLINK callback
 
-Let's assume we want to publish coordinates, temperature and humidity data from your Sigfox module to ThingsBoard.
-In order to achieve this, you will need to select device type and configure custom callback from Sigfox Backend to our IoT Gateway.
+Let's assume we want to publish coordinates, temperature and humidity data from your Sigfox module to ThingsBoard. In order to achieve this, you will need to select device type and configure custom callback from Sigfox Backend to our IoT Gateway.
 
-{:refdef: style="text-align: center;"}
-![image](/images/gateway/sigfox/4.sigfox_device_type_callback_configuration.jpg)
-{: refdef}
+{:refdef: style="text-align: center;"} ![image](../../.gitbook/assets/4.sigfox_device_type_callback_configuration.jpg) {: refdef}
 
 Few things to notice:
 
- - This is **UPLINK** data callback;
- - **URL pattern** contains IoT Gateway host, port and device type id;
- - **Authorization** header is used to authenticate Sigfox server;
- - **POST** HTTP method is required;
- - Message body is a **valid** JSON document;
- - Message body uses **regular variables**: device, lat, lng;
- - Message body uses **custom variables** which are case sensitive: Temperature and Humidity.
+* This is **UPLINK** data callback;
+* **URL pattern** contains IoT Gateway host, port and device type id;
+* **Authorization** header is used to authenticate Sigfox server;
+* **POST** HTTP method is required;
+* Message body is a **valid** JSON document;
+* Message body uses **regular variables**: device, lat, lng;
+* Message body uses **custom variables** which are case sensitive: Temperature and Humidity.
 
 Once again, we assume you have deployed the gateway on some cloud server to get the static IP address or hostname.
 
-### ThingsBoard IoT Gateway configuration steps
+## ThingsBoard IoT Gateway configuration steps
 
-#### Step 2. Enable Sigfox extension
+### Step 2. Enable Sigfox extension
 
-Navigate to gateway configuration folder and edit **tb-gateway.yml** file.
-Configuration folder location:
+Navigate to gateway configuration folder and edit **tb-gateway.yml** file. Configuration folder location:
 
 ```bash
 Windows: YOUR_INSTALL_DIR/conf
@@ -65,12 +57,11 @@ Linux: /etc/tb-gateway/conf
 
 Change **sigfox.enabled** property value to **true**.
 
-#### Step 3. Configure Sigfox extension
+### Step 3. Configure Sigfox extension
 
-The **sigfox-config.json** contains configuration that allows mapping of JSON messages from Sigfox Backend to ThingsBoard telemetry.
-The default mapping listed below will allow to convert data from Sigfox Backend and publish it to ThingsBoard.
- 
-```json
+The **sigfox-config.json** contains configuration that allows mapping of JSON messages from Sigfox Backend to ThingsBoard telemetry. The default mapping listed below will allow to convert data from Sigfox Backend and publish it to ThingsBoard.
+
+```javascript
 {
   "deviceTypeConfigurations": [
     {
@@ -116,15 +107,15 @@ The default mapping listed below will allow to convert data from Sigfox Backend 
 
 Few things to notice:
 
- - **YOUR_DEVICE_TYPE_ID** need to be replaced with the actual value ("58cb911a5005742b3b4c41a0" in our case)
- - **SECURITY_TOKEN** need to be replaced with the random value ("Basic U0lHRk9YX1RFU1RfVE9LRU4=" in our case)
- - **[JsonPath](https://github.com/jayway/JsonPath)** expression are used to extract values from incoming JSON ("$.data.temperature" in our case).
- - **All** JsonPath expressions need to be placed into **${}**.
- - **Transformers** are used to convert data types. For example, integer to double using "(65536-X)/10" formula. You can plugin your own converters.
- 
-See Sigfox extension [**configuration**](/docs/iot-gateway/sigfox/) for more details.
+* **YOUR\_DEVICE\_TYPE\_ID** need to be replaced with the actual value \("58cb911a5005742b3b4c41a0" in our case\)
+* **SECURITY\_TOKEN** need to be replaced with the random value \("Basic U0lHRk9YX1RFU1RfVE9LRU4=" in our case\)
+* [**JsonPath**](https://github.com/jayway/JsonPath) expression are used to extract values from incoming JSON \("$.data.temperature" in our case\).
+* **All** JsonPath expressions need to be placed into **${}**.
+* **Transformers** are used to convert data types. For example, integer to double using "\(65536-X\)/10" formula. You can plugin your own converters.
 
-#### Step 4. Restart ThingsBoard Gateway
+See Sigfox extension [**configuration**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/iot-gateway/sigfox/README.md) for more details.
+
+### Step 4. Restart ThingsBoard Gateway
 
 Restart your gateway using following commands
 
@@ -136,37 +127,25 @@ Linux:
 sudo service tb-gateway restart
 ```
 
-### ThingsBoard configuration steps
+## ThingsBoard configuration steps
 
-#### Step 5. Observe Sigfox devices
+### Step 5. Observe Sigfox devices
 
-Once your Sigfox Backend callback is configured, you may observe incoming messages in ThingsBoard IoT Gateway logs.
-If everything is configured correctly, you will see new devices in your Tenant Administrator device list.
+Once your Sigfox Backend callback is configured, you may observe incoming messages in ThingsBoard IoT Gateway logs. If everything is configured correctly, you will see new devices in your Tenant Administrator device list.
 
-{:refdef: style="text-align: center;"}
-![image](/images/gateway/sigfox/devices.png)
-{: refdef}
+{:refdef: style="text-align: center;"} ![image](../../.gitbook/assets/devices%20%281%29.png) {: refdef}
 
 You are able to open a particular device and check that telemetry values arrived successfully.
 
-#### Step 6. Provision Sigfox dashboard
+### Step 6. Provision Sigfox dashboard
 
-Download the dashboard file using this [**link**](/docs/samples/sigfox/sigfox_dashboard.json). 
-Use import/export [**instructions**](/docs/user-guide/ui/dashboards/#dashboard-importexport) to import the dashboard to your ThingsBoard instance.
+Download the dashboard file using this [**link**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/samples/sigfox/sigfox_dashboard.json). Use import/export [**instructions**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/ui/dashboards/README.md#dashboard-importexport) to import the dashboard to your ThingsBoard instance.
 
 **NOTE:** During import you will need to select a device that you want to visualize.
 
-{:refdef: style="text-align: center;"}
-![image](/images/gateway/sigfox/dashboard-import.png)
-{: refdef}
+{:refdef: style="text-align: center;"} ![image](../../.gitbook/assets/dashboard-import.png) {: refdef}
 
 Once imported, click on the dashboard card to see your device data:
 
-{:refdef: style="text-align: center;"}
-![image](/images/gateway/sigfox/dashboard-card.png)
-{: refdef}
-
-
-
-
+{:refdef: style="text-align: center;"} ![image](../../.gitbook/assets/dashboard-card.png) {: refdef}
 

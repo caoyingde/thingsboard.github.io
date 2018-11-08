@@ -2,35 +2,12 @@
 layout: docwithnav
 title: Products
 description: ThingsBoard Products
-
 ---
 
-<div class="cards">
-    <a href="/docs/getting-started-guides/what-is-thingsboard/" class="card thingsboard-ce">
-        <div class="card-title">
-            <span class="title-text">ThingsBoard<br/>Community Edition</span>
-        </div>
-        <div class="card-img product community-edition-bg"></div>
-        <div class="card-description">
-            Learn more
-        </div>
-    </a>
-    <a href="/products/thingsboard-pe/" class="card thingsboard-pe">
-        <div class="card-title">
-            <span class="title-text">ThingsBoard<br/>Professional Edition</span>
-        </div>
-        <div class="card-img product professional-edition-bg"></div>
-        <div class="card-description">  
-            Learn more
-        </div>
-    </a>
-    <a href="/docs/iot-gateway/what-is-iot-gateway/" class="card thingsboard-gw">
-        <div class="card-title">
-            <span class="title-text">ThingsBoard<br/>IoT Gateway</span>
-        </div>
-        <div class="card-img product gateway-bg"></div>
-        <div class="card-description">
-            Learn more
-        </div>
-    </a>
-</div>
+# index
+
+[ ThingsBoard  
+Community Edition Learn more](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/getting-started-guides/what-is-thingsboard/README.md)[ ThingsBoard  
+Professional Edition Learn more](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/products/thingsboard-pe/README.md)[ ThingsBoard  
+IoT Gateway Learn more](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/iot-gateway/what-is-iot-gateway/README.md)
+

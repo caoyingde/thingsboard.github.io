@@ -1,39 +1,15 @@
 ---
 layout: docwithnav
 title: Media Kit
-notitle: "true"
+notitle: 'true'
 description: ThingsBoard Media Kit
-
 ---
 
-<br/>
+# index
 
 ## ThingsBoard Logos
 
-<div class="mediakit-logos">
-    <div class="mediakit-logo">
-        <div class="logo-container logo-blue">
-            <img src="/images/thingsboard_logo_blue.svg">
-        </div>    
-    </div>
-    <div class="mediakit-logo">
-        <div class="logo-container logo-white">
-            <img src="/images/thingsboard_logo_white.svg">
-        </div>    
-    </div>
-    <div class="mediakit-logo">
-        <div class="logo-container logo-black">
-            <img src="/images/thingsboard_logo_black.svg">
-        </div>
-    </div>
-</div>
+ ![](../.gitbook/assets/thingsboard_logo_blue.svg) ![](../.gitbook/assets/thingsboard_logo_white.svg) ![](../.gitbook/assets/thingsboard_logo_black.svg)
 
-<div class="mediakit-block">
-    <div>
-        <a class="button accent" href="ThingsBoard_Logos.zip" target="_blank"><img src="/images/thingsboard_min_white.svg">Download</a>
-    </div>     
-</div>
-
-<br/>
-<br/>
+ [![](../.gitbook/assets/thingsboard_min_white.svg)Download](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/mediakit/ThingsBoard_Logos.zip)
 

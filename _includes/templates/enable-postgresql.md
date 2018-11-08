@@ -1,4 +1,6 @@
-Uncomment '# PostgreSQL DAO Configuration' block.  Be sure to update the postgres databases username and password in the bottom two lines of the block (here, as shown, they are both "postgres").
+# enable-postgresql
+
+Uncomment '\# PostgreSQL DAO Configuration' block. Be sure to update the postgres databases username and password in the bottom two lines of the block \(here, as shown, they are both "postgres"\).
 
 ```text
 # PostgreSQL DAO Configuration
@@ -17,3 +19,4 @@ spring:
     username: "${SPRING_DATASOURCE_USERNAME:postgres}"
     password: "${SPRING_DATASOURCE_PASSWORD:postgres}"
 ```
+

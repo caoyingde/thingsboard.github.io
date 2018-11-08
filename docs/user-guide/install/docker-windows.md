@@ -1,35 +1,31 @@
 ---
 layout: docwithnav
 assignees:
-- ashvayka
+  - ashvayka
 title: Installing ThingsBoard using Docker (Windows)
 description: Installing ThingsBoard IoT Platform using Docker (Windows)
-
 ---
 
-{% include templates/live-demo-banner.md %}
+# docker-windows
 
 * TOC
-{:toc}
+
+  {:toc}
 
 This guide will help you to install and start ThingsBoard using Docker on Windows.
 
-
 ## Installation steps
 
-- [Install Docker Toolbox for Windows](https://docs.docker.com/toolbox/toolbox_install_windows/)
-- Open "Docker Quickstart Terminal"
-{% include templates/docker-files.md %}
-      
-- If you have already installed ThingsBoard using docker and want to upgrade or cleanup your installation, please cleanup HSQLDB data directory
-      
+* [Install Docker Toolbox for Windows](https://docs.docker.com/toolbox/toolbox_install_windows/)
+* Open "Docker Quickstart Terminal"
+* If you have already installed ThingsBoard using docker and want to upgrade or cleanup your installation, please cleanup HSQLDB data directory
+
 ```bash
 docker-machine ssh default 'rm -rf /home/docker/hsqldb_volume'
 ```
 
-{% include templates/start-docker.md %}
-   
-- In order to get access to necessary resources from external IP/Host after ThingsBoard docker container installation,
+* In order to get access to necessary resources from external IP/Host after ThingsBoard docker container installation,
+
   please execute the following commands on windows host machine:
 
 ```bash
@@ -40,16 +36,16 @@ docker-machine ssh default 'rm -rf /home/docker/hsqldb_volume'
 # CoAP port
 "C:\Program Files\Oracle\VirtualBox\VBoxManage.exe" controlvm "default" natpf1 "tcp-port5683,tcp,,5683,,5683"
 ```
-   
-- Now you should be able to open Web UI using following link:
-   
+
+* Now you should be able to open Web UI using following link:
+
 ```bash
 http://localhost:8080/
 ```
 
 ## Advanced usage
 
-See corresponding page in [linux guide](/docs/user-guide/install/docker/#advanced-usage) for more details.
+See corresponding page in [linux guide](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/install/docker/README.md#advanced-usage) for more details.
 
 ## Troubleshooting
 
@@ -63,7 +59,5 @@ See corresponding page in [linux guide](/docs/user-guide/install/docker/#advance
 
 You may configure your system to use [Google public DNS servers](https://developers.google.com/speed/public-dns/docs/using#windows)
 
-
 ## Next steps
 
-{% assign currentGuide = "InstallationGuides" %}{% include templates/guides-banner.md %}

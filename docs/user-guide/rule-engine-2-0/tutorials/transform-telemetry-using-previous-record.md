@@ -2,22 +2,23 @@
 layout: docwithnav
 title: Transform telemetry using previous record
 description: Transform telemetry using previous record
-
 ---
 
+# transform-telemetry-using-previous-record
+
 * TOC
-{:toc}
+
+  {:toc}
 
 ## Use case
 
-Let's assume your device is reporting absolute "counter" that correspond to water consumption. 
-However, you would like to visualize not the "absolute" but "delta" values, e.g. how many water was consumer within last day, week, month.   
+Let's assume your device is reporting absolute "counter" that correspond to water consumption. However, you would like to visualize not the "absolute" but "delta" values, e.g. how many water was consumer within last day, week, month.
 
 In this tutorial we will calculate "delta" of the counter readings based on current and previous reading.
 
 Assuming that previous reported value of counter was 90, we will transform incoming telemetry:
 
-```json
+```javascript
 {
   "counter": 100
 }
@@ -25,62 +26,58 @@ Assuming that previous reported value of counter was 90, we will transform incom
 
 to
 
-```json
+```javascript
 {
   "counter": 100,
   "delta": 10
 }
 ```
 
-## Prerequisites 
+## Prerequisites
 
 We assume you have completed the following guides and reviewed the articles listed below:
 
-  * [Getting Started](/docs/getting-started-guides/helloworld/) guide.
-  * [Rule Engine Overview](/docs/user-guide/rule-engine-2-0/overview/).
-  * [Transform Incoming Telemetry](/docs/user-guide/rule-engine-2-0/tutorials/transform-incoming-telemetry/) guide.
+* [Getting Started](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/getting-started-guides/helloworld/README.md) guide.
+* [Rule Engine Overview](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/rule-engine-2-0/overview/README.md).
+* [Transform Incoming Telemetry](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/rule-engine-2-0/tutorials/transform-incoming-telemetry/README.md) guide.
 
 ## Step 1: Adding enrichment node
 
-We will modify default rule chain and will an [**enrichment**](/docs/user-guide/rule-engine-2-0/enrichment-nodes/#originator-attributes) rule node to fetch previous telemetry value from the database and put it to the message metadata.
+We will modify default rule chain and will an [**enrichment**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/rule-engine-2-0/enrichment-nodes/README.md#originator-attributes) rule node to fetch previous telemetry value from the database and put it to the message metadata.
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/previous/rule-chain.png)
+![image](../../../../.gitbook/assets/rule-chain%20%283%29.png)
 
 We will use the following node configuration:
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/previous/node-config-step-1.png)
+![image](../../../../.gitbook/assets/node-config-step-1.png)
 
-Please note that if the "counter" value is missing, the rule node will return failure. 
-We will protect from this failure by setting the default previous counter on the next step.  
+Please note that if the "counter" value is missing, the rule node will return failure. We will protect from this failure by setting the default previous counter on the next step.
 
 ## Step 2: Default previous counter node
 
-This [**transformation**](/docs/user-guide/rule-engine-2-0/transformation-nodes/#script-transformation-node) node will set the default counter to the metadata from the incoming message. This will be used to set default "delta" value to 0 on the next step.
+This [**transformation**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/rule-engine-2-0/transformation-nodes/README.md#script-transformation-node) node will set the default counter to the metadata from the incoming message. This will be used to set default "delta" value to 0 on the next step.
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/previous/node-config-step-2.png)
+![image](../../../../.gitbook/assets/node-config-step-2.png)
 
 ## Step 3: Delta transformation node
 
-This [**transformation**](/docs/user-guide/rule-engine-2-0/transformation-nodes/#script-transformation-node) node will calculate delta based on previous counter value from the metadata and current value from the message. 
+This [**transformation**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/rule-engine-2-0/transformation-nodes/README.md#script-transformation-node) node will calculate delta based on previous counter value from the metadata and current value from the message.
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/previous/node-config-step-3.png)
+![image](../../../../.gitbook/assets/node-config-step-3.png)
 
 ## Step 4: Setup dashboard to view the data
 
 We have added simple card widget to show the latest values generated by the rule chain
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/previous/dashboard.png)
+![image](../../../../.gitbook/assets/dashboard.png)
 
 ## TL;DR
 
-Download and import attached json [**file**](/docs/user-guide/resources/previous-telemetry-rule-chain.json) with a rule chain from this tutorial. Don't forget to mark new rule chain as "root".
+Download and import attached json [**file**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/resources/previous-telemetry-rule-chain.json) with a rule chain from this tutorial. Don't forget to mark new rule chain as "root".
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/make-root.png)
+![image](../../../../.gitbook/assets/make-root%20%282%29.png)
 
-Download and import attached json [**file**](/docs/user-guide/resources/previous-telemetry-dashboard.json) with a dashboard from this tutorial. 
-
+Download and import attached json [**file**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/resources/previous-telemetry-dashboard.json) with a dashboard from this tutorial.
 
 ## Next steps
-
-{% assign currentGuide = "DataProcessing" %}{% include templates/guides-banner.md %}
 

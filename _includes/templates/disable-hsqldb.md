@@ -1,5 +1,7 @@
-Comment '# HSQLDB DAO Configuration' block.
- 
+# disable-hsqldb
+
+Comment '\# HSQLDB DAO Configuration' block.
+
 ```text
 # HSQLDB DAO Configuration
 #spring:
@@ -17,3 +19,4 @@ Comment '# HSQLDB DAO Configuration' block.
 #    username: "${SPRING_DATASOURCE_USERNAME:sa}"
 #    password: "${SPRING_DATASOURCE_PASSWORD:}"
 ```
+

@@ -1,55 +1,10 @@
 ---
 layout: docwithnav
 title: Industries
-description: 
-
+description: null
 ---
 
-<div class="cards">
-    <a href="/industries/smart-energy/" class="accent card">
-        <div class="card-title">
-            <span class="title-text">Smart Energy</span>
-        </div>
-        <div class="card-img smart-energy-bg"></div>
-        <div class="card-description">
-            Learn more
-        </div>
-    </a>
-    <a href="/industries/agriculture/" class="accent card">
-        <div class="card-title">
-            <span class="title-text">Agriculture</span>
-        </div>
-        <div class="card-img agriculture-bg"></div>
-        <div class="card-description">  
-            Learn more
-        </div>        
-    </a>
-    <a href="/industries/smart-buildings/" class="accent card">            
-        <div class="card-title">
-            <span class="title-text">Smart Buildings</span>
-        </div>
-        <div class="card-img smart-building-bg"></div>
-        <div class="card-description">
-            Learn more
-        </div>        
-    </a>
-    <a href="/industries/smart-city/" class="accent card">            
-        <div class="card-title">
-            <span class="title-text">Smart City</span>
-        </div>
-        <div class="card-img smart-city-bg"></div>
-        <div class="card-description">
-            Learn more
-        </div>        
-    </a>
-    <a href="/industries/telecom/" class="accent card">            
-        <div class="card-title">
-            <span class="title-text">Telecommunications</span>
-        </div>
-        <div class="card-img telecom-bg"></div>
-        <div class="card-description">
-            Learn more
-        </div>        
-    </a>
-</div>
+# index
+
+[ Smart Energy Learn more](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/industries/smart-energy/README.md)[ Agriculture Learn more](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/industries/agriculture/README.md)[ Smart Buildings Learn more](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/industries/smart-buildings/README.md)[ Smart City Learn more](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/industries/smart-city/README.md)[ Telecommunications Learn more](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/industries/telecom/README.md)
 

@@ -1,10 +1,11 @@
 ---
 layout: docwithnav
 assignees:
-- ashvayka
+  - ashvayka
 title: Kafka Plugin
-
 ---
+
+# kafka
 
 ## Overview
 
@@ -14,15 +15,15 @@ Kafka plugin is responsible for sending messages to Kafka brokers triggered by s
 
 You can specify following configuration parameters:
 
- - *bootstrap servers* - list of kafka brokers
- - *number of attempts to reconnect to kafka if connection fails*
- - *number of messages to unit into batch on client*
- - *time to buffer locally before sending to kafka broker (in ms)*
- - *buffer max size on client*
- - *minimum number of replicas that must acknowledge a write*
- - *topic key serializer* by default - org.apache.kafka.common.serialization.StringSerializer
- - *topic value serializer* by default - org.apache.kafka.common.serialization.StringSerializer
- - any other additional properties could be provided for kafka broker connection
+* _bootstrap servers_ - list of kafka brokers
+* _number of attempts to reconnect to kafka if connection fails_
+* _number of messages to unit into batch on client_
+* _time to buffer locally before sending to kafka broker \(in ms\)_
+* _buffer max size on client_
+* _minimum number of replicas that must acknowledge a write_
+* _topic key serializer_ by default - org.apache.kafka.common.serialization.StringSerializer
+* _topic value serializer_ by default - org.apache.kafka.common.serialization.StringSerializer
+* any other additional properties could be provided for kafka broker connection
 
 ## Server-side API
 
@@ -34,51 +35,51 @@ In this example, we are going to demonstrate how you can configure this extensio
 
 Prerequisites before contining Kafka extension configuration:
 
- - Kafka broker is up and running
- - Appropriate Kafka Topic created
- - ThingsBoard is up and running
+* Kafka broker is up and running
+* Appropriate Kafka Topic created
+* ThingsBoard is up and running
 
 ### Kafka Plugin Configuration
 
-Let's configure Kafka plugin first. Go to *Plugins* menu and create new plugin:
+Let's configure Kafka plugin first. Go to _Plugins_ menu and create new plugin:
 
-![image](/images/reference/plugins/kafka/kafka-plugin-config-1.png)
+![image](../../../.gitbook/assets/kafka-plugin-config-1.png)
 
-![image](/images/reference/plugins/kafka/kafka-plugin-config-2.png)
+![image](../../../.gitbook/assets/kafka-plugin-config-2.png)
 
 Please set correctly Kafka Bootstrap Servers URL and any other parameters located in plugin configuration section that is suitable for your case so Kafka extension is able to connect to Kafka broker.
 
-Click on *'Activate'* plugin button:
+Click on _'Activate'_ plugin button:
 
-![image](/images/reference/plugins/kafka/kafka-activate-plugin.png)
+![image](../../../.gitbook/assets/kafka-activate-plugin.png)
 
 ### Kafka Rule Configuration
 
 Now it's time to create appropriate Rule.
 
-![image](/images/reference/plugins/kafka/kafka-rule-config.png)
+![image](../../../.gitbook/assets/kafka-rule-config.png)
 
-Add filter for **POST_TELEMETRY** message type:
+Add filter for **POST\_TELEMETRY** message type:
 
-![image](/images/reference/plugins/post-telemetry-filter.png)
+![image](../../../.gitbook/assets/post-telemetry-filter%20%282%29.png)
 
-Click *'Add'* button to add filter.
+Click _'Add'_ button to add filter.
 
-Then select *'Kafka Plugin'* in the drop-down box for the Plugin field:
+Then select _'Kafka Plugin'_ in the drop-down box for the Plugin field:
 
-![image](/images/reference/plugins/kafka/kafka-plugin-selection.png)
+![image](../../../.gitbook/assets/kafka-plugin-selection.png)
 
 Add action that will send temperature telemetry of device to particular kafka topic:
 
-![image](/images/reference/plugins/kafka/send-temp-telemetry.png)
+![image](../../../.gitbook/assets/send-temp-telemetry.png)
 
-Click *'Add'* button and then activate Rule.
+Click _'Add'_ button and then activate Rule.
 
 ### Sending Temperature Telemetry
 
-Now you can send Telemetry message that contains *'temp'* telemetry for any of your devices:
+Now you can send Telemetry message that contains _'temp'_ telemetry for any of your devices:
 
-```json
+```javascript
 {"temp":73.4}
 ```
 
@@ -89,3 +90,4 @@ Here is an example of a command that publish single telemetry message to locally
 ```bash
 mosquitto_pub -d -h "localhost" -p 1883 -t "v1/devices/me/telemetry" -u "$ACCESS_TOKEN" -m '{"temp":73.4}'
 ```
+

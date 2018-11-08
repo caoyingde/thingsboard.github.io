@@ -1,4 +1,4 @@
-### Run installation script
+# Run installation script
 
 Once ThingsBoard service is installed, you can execute the following script:
 
@@ -6,3 +6,4 @@ Once ThingsBoard service is installed, you can execute the following script:
 # --loadDemo option will load demo data: users, devices, assets, rules, widgets.
 sudo /usr/share/thingsboard/bin/install/install.sh --loadDemo
 ```
+

@@ -1,14 +1,21 @@
-<table class="pe-feature-banner">
+# pe-rule-node-banner
+
+<table>
+  <thead>
     <tr>
-        <td style="width: 58px;" valign="top">
-            <img width="58" height="58" src="/images/info-sign-white.svg"/>
-        </td>
-        <td>
-            <br/>
-            <p><b>Professional Rule Node</b></p>
-            <br/>
-            <p>Only <a class="pe-link" href="/products/thingsboard-pe/"><b>ThingsBoard Professional Edition</b></a> supports <b>{{ rulenode }}</b> Rule Node.</p>
-            <p>See <a class="pe-learn-more" href="/products/thingsboard-pe/install/"><b>Get ThingsBoard PE</b></a> to install ThingsBoard PE.</p>
-        </td>
+      <th style="text-align:left">
+        <img src="../../.gitbook/assets/info-sign-white.svg" alt/>
+      </th>
+      <th style="text-align:left">
+        <p><b>Professional Rule Node</b>
+          <br />
+        </p>
+        <p>Only <a href="https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/products/thingsboard-pe/README.md"><b>ThingsBoard Professional Edition</b></a> supports <b>{{ rulenode }}</b> Rule
+          Node.</p>
+        <p>See <a href="https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/products/thingsboard-pe/install/README.md"><b>Get ThingsBoard PE</b></a> to
+          install ThingsBoard PE.</p>
+      </th>
     </tr>
+  </thead>
+  <tbody></tbody>
 </table>

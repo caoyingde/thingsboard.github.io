@@ -2,30 +2,21 @@
 layout: docwithnav
 title: Upgrading ThingsBoard PE from AWS Marketplace
 description: Upgrading ThingsBoard PE from AWS Marketplace
-
 ---
 
-This guide describes how to upgrade ThingsBoard Professional Edition from AWS Marketplace. 
+# aws-marketplace-pe-upgrade
 
-<ul id="markdown-toc">
-  <li>
-    <a href="#upgrading-to-thingsboard-pe-v202" id="markdown-toc-upgrading-to-thingsboard-pe-v202">Upgrading to ThingsBoard PE v.2.0.2</a>
-  </li>
-  <li>
-    <a href="#upgrading-to-thingsboard-pe-v210" id="markdown-toc-upgrading-to-thingsboard-pe-v210">Upgrading to ThingsBoard PE v.2.1.0</a>
-  </li>
-  <li>
-    <a href="#upgrading-to-thingsboard-pe-v213" id="markdown-toc-upgrading-to-thingsboard-pe-v213">Upgrading to ThingsBoard PE v.2.1.3</a>
-  </li>
-</ul>
+This guide describes how to upgrade ThingsBoard Professional Edition from AWS Marketplace.
+
+*  [Upgrading to ThingsBoard PE v.2.0.2](aws-marketplace-pe-upgrade.md#upgrading-to-thingsboard-pe-v202)
+*  [Upgrading to ThingsBoard PE v.2.1.0](aws-marketplace-pe-upgrade.md#upgrading-to-thingsboard-pe-v210)
+*  [Upgrading to ThingsBoard PE v.2.1.3](aws-marketplace-pe-upgrade.md#upgrading-to-thingsboard-pe-v213)
 
 ## Upgrading to ThingsBoard PE v.2.0.2
 
 These steps are applicable for ThingsBoard PE with Cassandra v.1.4.
 
-{% include templates/upgrade-to-20-notice.md %}
-
-#### Connect to your ThingsBoard PE v.1.4 instance over SSH.
+### Connect to your ThingsBoard PE v.1.4 instance over SSH.
 
 Below is example command as a reference:
 
@@ -33,10 +24,9 @@ Below is example command as a reference:
 $ ssh -i <PRIVATE-KEY> ubuntu@<PUBLIC_DNS_NAME>
 ```
 
-or goto EC2 instances and locate your ThingsBoard PE v1.4 instance. 
-Then select **Actions -> Connect** and follow instructions provided in **Connect To Your Instance** dialog.
+or goto EC2 instances and locate your ThingsBoard PE v1.4 instance. Then select **Actions -&gt; Connect** and follow instructions provided in **Connect To Your Instance** dialog.
 
-#### Upgrade ThingsBoard PE package 
+### Upgrade ThingsBoard PE package
 
 In the console execute the following command:
 
@@ -100,41 +90,41 @@ If you changed configuration files previously you can compare new configuration 
 
 At least the following configuration parameters should be restored:
 
-- edit **/usr/share/thingsboard/conf/thingsboard.conf**, for ex.:
+* edit **/usr/share/thingsboard/conf/thingsboard.conf**, for ex.:
 
 ```bash
 $ sudo vi /usr/share/thingsboard/conf/thingsboard.conf
 ```
 
-- locate and replace ```-Dplatform=deb``` with ```-Dplatform=ami-pe-cassandra```. The final line should be the following:
+* locate and replace `-Dplatform=deb` with `-Dplatform=ami-pe-cassandra`. The final line should be the following:
 
-```
+```text
    ...
    export JAVA_OPTS="$JAVA_OPTS -Dplatform=ami-pe-cassandra -Dinstall.data_dir=/usr/share/thingsboard/data"
    ...
 ```
 
-- edit **/usr/share/thingsboard/conf/thingsboard.yml**. for ex.:
+* edit **/usr/share/thingsboard/conf/thingsboard.yml**. for ex.:
 
 ```bash
 $ sudo vi /usr/share/thingsboard/conf/thingsboard.yml
 ```
 
-- locate the following lines:
+* locate the following lines:
 
-```
+```text
    database:
      type: "${DATABASE_TYPE:sql}" # cassandra OR sql
 ```
 
-- change ```database.type``` value from ```sql``` to ```cassandra```:
+* change `database.type` value from `sql` to `cassandra`:
 
-```
+```text
    database:
      type: "${DATABASE_TYPE:cassandra}" # cassandra OR sql
 ```
 
-#### Upgrade Database
+### Upgrade Database
 
 Execute database upgrade using the following command:
 
@@ -165,9 +155,9 @@ Upgrade finished successfully!
 ThingsBoard upgraded successfully!
 ```
 
-In case of any **failures** during database upgrade **Please contact [support@thingsboard.io](mailto:support@thingsboard.io)**.
+In case of any **failures** during database upgrade **Please contact** [**support@thingsboard.io**](mailto:support@thingsboard.io).
 
-#### Start ThingsBoard PE service
+### Start ThingsBoard PE service
 
 Execute the following command in order to start ThingsBoard service:
 
@@ -181,12 +171,11 @@ You can issue the following command in order to check if there are any errors on
 $ cat /var/log/thingsboard/thingsboard.log | grep ERROR
 ```
 
-
 ## Upgrading to ThingsBoard PE v.2.1.0
 
 These steps are applicable for ThingsBoard PE with Cassandra v.2.0.2.
 
-#### Connect to your ThingsBoard PE v.2.0.2 instance over SSH.
+### Connect to your ThingsBoard PE v.2.0.2 instance over SSH.
 
 Below is example command as a reference:
 
@@ -194,10 +183,9 @@ Below is example command as a reference:
 $ ssh -i <PRIVATE-KEY> ubuntu@<PUBLIC_DNS_NAME>
 ```
 
-or goto EC2 instances and locate your ThingsBoard PE v2.0.2 instance. 
-Then select **Actions -> Connect** and follow instructions provided in **Connect To Your Instance** dialog.
+or goto EC2 instances and locate your ThingsBoard PE v2.0.2 instance. Then select **Actions -&gt; Connect** and follow instructions provided in **Connect To Your Instance** dialog.
 
-#### Upgrade ThingsBoard PE package 
+### Upgrade ThingsBoard PE package
 
 In the console execute the following command:
 
@@ -261,41 +249,41 @@ If you changed configuration files previously you can compare new configuration 
 
 At least the following configuration parameters should be restored:
 
-- edit **/usr/share/thingsboard/conf/thingsboard.conf**, for ex.:
+* edit **/usr/share/thingsboard/conf/thingsboard.conf**, for ex.:
 
 ```bash
 $ sudo vi /usr/share/thingsboard/conf/thingsboard.conf
 ```
 
-- locate and replace ```-Dplatform=deb``` with ```-Dplatform=ami-pe-cassandra```. The final line should be the following:
+* locate and replace `-Dplatform=deb` with `-Dplatform=ami-pe-cassandra`. The final line should be the following:
 
-```
+```text
    ...
    export JAVA_OPTS="$JAVA_OPTS -Dplatform=ami-pe-cassandra -Dinstall.data_dir=/usr/share/thingsboard/data"
    ...
 ```
 
-- edit **/usr/share/thingsboard/conf/thingsboard.yml**. for ex.:
+* edit **/usr/share/thingsboard/conf/thingsboard.yml**. for ex.:
 
 ```bash
 $ sudo vi /usr/share/thingsboard/conf/thingsboard.yml
 ```
 
-- locate the following lines:
+* locate the following lines:
 
-```
+```text
    database:
      type: "${DATABASE_TYPE:sql}" # cassandra OR sql
 ```
 
-- change ```database.type``` value from ```sql``` to ```cassandra```:
+* change `database.type` value from `sql` to `cassandra`:
 
-```
+```text
    database:
      type: "${DATABASE_TYPE:cassandra}" # cassandra OR sql
 ```
 
-#### Upgrade Database
+### Upgrade Database
 
 Execute database upgrade using the following command:
 
@@ -321,9 +309,9 @@ Upgrade finished successfully!
 ThingsBoard upgraded successfully!
 ```
 
-In case of any **failures** during database upgrade **Please contact [support@thingsboard.io](mailto:support@thingsboard.io)**.
+In case of any **failures** during database upgrade **Please contact** [**support@thingsboard.io**](mailto:support@thingsboard.io).
 
-#### Start ThingsBoard PE service
+### Start ThingsBoard PE service
 
 Execute the following command in order to start ThingsBoard service:
 
@@ -337,7 +325,7 @@ You can issue the following command in order to check if there are any errors on
 $ cat /var/log/thingsboard/thingsboard.log | grep ERROR
 ```
 
-#### Install ThingsBoard Web Report Server
+### Install ThingsBoard Web Report Server
 
 Execute the following command in order to install Report Server prerequisites:
 
@@ -378,7 +366,7 @@ Processing triggers for ureadahead (0.100.0-19) ...
 Latest version of ThingsBoard Web Report Server has been installed.
 ```
 
-#### Start ThingsBoard Web Report Server
+### Start ThingsBoard Web Report Server
 
 Execute the following command in order to start ThingsBoard Web Report Server:
 
@@ -390,7 +378,7 @@ $ sudo service tb-web-report start
 
 These steps are applicable for ThingsBoard PE with Cassandra v.2.1.0.
 
-#### Connect to your ThingsBoard PE v.2.1.0 instance over SSH.
+### Connect to your ThingsBoard PE v.2.1.0 instance over SSH.
 
 Below is example command as a reference:
 
@@ -398,10 +386,9 @@ Below is example command as a reference:
 $ ssh -i <PRIVATE-KEY> ubuntu@<PUBLIC_DNS_NAME>
 ```
 
-or goto EC2 instances and locate your ThingsBoard PE v2.1.0 instance. 
-Then select **Actions -> Connect** and follow instructions provided in **Connect To Your Instance** dialog.
+or goto EC2 instances and locate your ThingsBoard PE v2.1.0 instance. Then select **Actions -&gt; Connect** and follow instructions provided in **Connect To Your Instance** dialog.
 
-#### Upgrade ThingsBoard PE package 
+### Upgrade ThingsBoard PE package
 
 In the console execute the following command:
 
@@ -465,29 +452,29 @@ If you changed configuration files previously you can compare new configuration 
 
 At least the following configuration parameters should be restored:
 
-- edit **/usr/share/thingsboard/conf/thingsboard.conf**, for ex.:
+* edit **/usr/share/thingsboard/conf/thingsboard.conf**, for ex.:
 
 ```bash
 $ sudo vi /usr/share/thingsboard/conf/thingsboard.conf
 ```
 
-- locate and replace ```-Dplatform=deb``` with ```-Dplatform=ami-pe-cassandra```. The final line should be the following:
+* locate and replace `-Dplatform=deb` with `-Dplatform=ami-pe-cassandra`. The final line should be the following:
 
-```
+```text
    ...
    export JAVA_OPTS="$JAVA_OPTS -Dplatform=ami-pe-cassandra -Dinstall.data_dir=/usr/share/thingsboard/data"
    ...
 ```
 
-- edit **/usr/share/thingsboard/conf/thingsboard.yml**. for ex.:
+* edit **/usr/share/thingsboard/conf/thingsboard.yml**. for ex.:
 
 ```bash
 $ sudo vi /usr/share/thingsboard/conf/thingsboard.yml
 ```
 
-- locate the following lines:
+* locate the following lines:
 
-```
+```text
     database:
       entities:
         type: "${DATABASE_ENTITIES_TYPE:sql}" # cassandra OR sql
@@ -495,9 +482,9 @@ $ sudo vi /usr/share/thingsboard/conf/thingsboard.yml
         type: "${DATABASE_TS_TYPE:sql}" # cassandra OR sql (for hybrid mode, only this value should be cassandra)
 ```
 
-- change ```database.entities.type``` and ```database.ts.type``` values from ```sql``` to ```cassandra```:
+* change `database.entities.type` and `database.ts.type` values from `sql` to `cassandra`:
 
-```
+```text
     database:
       entities:
         type: "${DATABASE_ENTITIES_TYPE:cassandra}" # cassandra OR sql
@@ -505,7 +492,7 @@ $ sudo vi /usr/share/thingsboard/conf/thingsboard.yml
         type: "${DATABASE_TS_TYPE:cassandra}" # cassandra OR sql (for hybrid mode, only this value should be cassandra)
 ```
 
-#### Upgrade Database
+### Upgrade Database
 
 Execute database upgrade using the following command:
 
@@ -543,9 +530,9 @@ Upgrade finished successfully!
 ThingsBoard upgraded successfully!
 ```
 
-In case of any **failures** during database upgrade **Please contact [support@thingsboard.io](mailto:support@thingsboard.io)**.
+In case of any **failures** during database upgrade **Please contact** [**support@thingsboard.io**](mailto:support@thingsboard.io).
 
-#### Start ThingsBoard PE service
+### Start ThingsBoard PE service
 
 Execute the following command in order to start ThingsBoard service:
 
@@ -558,3 +545,4 @@ You can issue the following command in order to check if there are any errors on
 ```bash
 $ cat /var/log/thingsboard/thingsboard.log | grep ERROR
 ```
+

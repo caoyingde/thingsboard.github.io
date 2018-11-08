@@ -1,10 +1,11 @@
 ---
 layout: docwithnav
 assignees:
-- ashvayka
+  - ashvayka
 title: RabbitMQ Plugin
-
 ---
+
+# rabbitmq
 
 ## Overview
 
@@ -14,15 +15,15 @@ RabbitMQ plugin is responsible for sending messages to RabbitMQ instances trigge
 
 You can specify following configuration parameters:
 
- - rabbitmq instance host
- - rabbitmq instance port
- - rabbitmq virtual host
- - username for authorization
- - password for authorization
- - enables automation connection revovery in case of failure
- - connection timeout
- - handshake timeout
- - additional client properties that could be usefull for connecting to specific rabbitmq instances
+* rabbitmq instance host
+* rabbitmq instance port
+* rabbitmq virtual host
+* username for authorization
+* password for authorization
+* enables automation connection revovery in case of failure
+* connection timeout
+* handshake timeout
+* additional client properties that could be usefull for connecting to specific rabbitmq instances
 
 ## Server-side API
 
@@ -34,50 +35,50 @@ In this example, we are going to demonstrate how you can configure RabbitMQ exte
 
 Prerequisites before continuing RabbitMQ extension configuration:
 
- - ThingsBoard is up and running
- - RabbitMQ instance is up and running
+* ThingsBoard is up and running
+* RabbitMQ instance is up and running
 
 ### RabbitMQ Plugin Configuration
 
-Let's configure RabbitMQ plugin first. Go to *Plugins* menu, click on a '+' button and create new plugin:
+Let's configure RabbitMQ plugin first. Go to _Plugins_ menu, click on a '+' button and create new plugin:
 
-![image](/images/reference/plugins/rabbitmq/rabbitmq-plugin-config-1.png)
+![image](../../../.gitbook/assets/rabbitmq-plugin-config-1.png)
 
-![image](/images/reference/plugins/rabbitmq/rabbitmq-plugin-config-2.png)
+![image](../../../.gitbook/assets/rabbitmq-plugin-config-2.png)
 
 Please set host, port and credentials correctly so extension is able to connect to RabbitMQ broker.
 
-Save plugin and click on *'Activate'* plugin button:
+Save plugin and click on _'Activate'_ plugin button:
 
-![image](/images/reference/plugins/rabbitmq/rabbitmq-activate-plugin.png)
+![image](../../../.gitbook/assets/rabbitmq-activate-plugin.png)
 
 ### RabbitMQ Rule Configuration
 
 Now it's time to create appropriate Rule.
 
-![image](/images/reference/plugins/rabbitmq/rabbitmq-rule-config.png)
+![image](../../../.gitbook/assets/rabbitmq-rule-config.png)
 
-Add filter for **POST_TELEMETRY** message type:
+Add filter for **POST\_TELEMETRY** message type:
 
-![image](/images/reference/plugins/rabbitmq/post-telemetry-filter.png)
+![image](../../../.gitbook/assets/post-telemetry-filter%20%281%29.png)
 
-Click *'Add'* button to add the filter.
+Click _'Add'_ button to add the filter.
 
-Then select *'RabbitMQ Plugin'* in the drop-down box for the Plugin field:
+Then select _'RabbitMQ Plugin'_ in the drop-down box for the Plugin field:
 
-![image](/images/reference/plugins/rabbitmq/rabbitmq-plugin-selection.png)
+![image](../../../.gitbook/assets/rabbitmq-plugin-selection.png)
 
 Add action that will send temperature telemetry of device to particular RabbitMQ queue:
 
-![image](/images/reference/plugins/rabbitmq/rabbitmq-rule-action-config.png)
+![image](../../../.gitbook/assets/rabbitmq-rule-action-config.png)
 
-Click *'Add'* button and then activate Rule.
+Click _'Add'_ button and then activate Rule.
 
 ### Sending Temperature Telemetry
 
-Now for any of your devices send Telemetry message that contains *'temp'* telemetry:
+Now for any of your devices send Telemetry message that contains _'temp'_ telemetry:
 
-```json
+```javascript
 {"temp":73.4}
 ```
 
@@ -88,3 +89,4 @@ Here is an example of a command that publish single telemetry message to locally
 ```bash
 mosquitto_pub -d -h "localhost" -p 1883 -t "v1/devices/me/telemetry" -u "$ACCESS_TOKEN" -m '{"temp":73.4}'
 ```
+

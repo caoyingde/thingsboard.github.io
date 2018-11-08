@@ -1,32 +1,11 @@
-{% if currentGuide != "GettingStartedGuides" %}
-- [Getting started guides](/docs/guides#AnchorIDGettingStartedGuides) - These guides provide quick overview of main ThingsBoard features. Designed to be completed in 15-30 minutes.
-{% endif %}
-{% if currentGuide != "InstallationGuides" %}
-- [Installation guides](/docs/guides#AnchorIDInstallationGuides) - Learn how to setup ThingsBoard on various available operating systems.
-{% endif %}
-{% if currentGuide != "ConnectYourDevice" %}
-- [Connect your device](/docs/guides#AnchorIDConnectYourDevice) - Learn how to connect devices based on your connectivity technology or solution.
-{% endif %}
-{% if currentGuide != "DataVisualization" %}
-- [Data visualization](/docs/guides#AnchorIDDataVisualization) - These guides contain instructions how to configure complex ThingsBoard dashboards
-{% endif %}
-{% if currentGuide != "DataProcessing" %}
-- [Data processing & actions](/docs/guides#AnchorIDDataProcessing) - Learn how to use ThingsBoard Rule Engine.
-{% endif %}
-{% if currentGuide != "DataAnalytics" %}
-- [IoT Data analytics](/docs/guides#AnchorIDDataAnalytics) - Learn how to use rule engine to perform basic analytics tasks.
-{% endif %}
-{% if currentGuide != "HardwareSamples" %}
-- [Hardware samples](/docs/guides#AnchorIDHardwareSamples) - Learn how to connect various hardware platforms to ThingsBoard.
-{% endif %}
-{% if currentGuide != "AdvancedFeatures" %}
-- [Advanced features](/docs/guides#AnchorIDAdvancedFeatures) - Learn about advanced ThingsBoard features
-{% endif %}
+# guides-banner
 
-<br/>
-<br/>
-
-
-
-
+* [Getting started guides](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/guides/README.md#AnchorIDGettingStartedGuides) - These guides provide quick overview of main ThingsBoard features. Designed to be completed in 15-30 minutes.
+* [Installation guides](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/guides/README.md#AnchorIDInstallationGuides) - Learn how to setup ThingsBoard on various available operating systems.
+* [Connect your device](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/guides/README.md#AnchorIDConnectYourDevice) - Learn how to connect devices based on your connectivity technology or solution.
+* [Data visualization](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/guides/README.md#AnchorIDDataVisualization) - These guides contain instructions how to configure complex ThingsBoard dashboards
+* [Data processing & actions](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/guides/README.md#AnchorIDDataProcessing) - Learn how to use ThingsBoard Rule Engine.
+* [IoT Data analytics](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/guides/README.md#AnchorIDDataAnalytics) - Learn how to use rule engine to perform basic analytics tasks.
+* [Hardware samples](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/guides/README.md#AnchorIDHardwareSamples) - Learn how to connect various hardware platforms to ThingsBoard.
+* [Advanced features](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/guides/README.md#AnchorIDAdvancedFeatures) - Learn about advanced ThingsBoard features
 

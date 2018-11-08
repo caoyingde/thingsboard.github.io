@@ -1,14 +1,15 @@
 ---
 layout: docwithnav
 assignees:
-- ashvayka
+  - ashvayka
 title: Telemetry Plugin Action
-
 ---
+
+# telemetry-plugin-action
 
 ## Overview
 
-This component allows forwarding incoming attributes and timeseries requests to telemetry plugin. 
+This component allows forwarding incoming attributes and timeseries requests to telemetry plugin.
 
 ## Configuration
 
@@ -16,4 +17,5 @@ There is no specific configuration for this component.
 
 ## Example
 
-As a system administrator, you are able to review action example inside **Rules->System Telemetry Rule->Actions->Telemetry Plugin Action**.
+As a system administrator, you are able to review action example inside **Rules-&gt;System Telemetry Rule-&gt;Actions-&gt;Telemetry Plugin Action**.
+

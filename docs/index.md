@@ -1,67 +1,64 @@
 ---
 layout: docwithnav
 title: ThingsBoard Documentation
-description: ThingsBoard documentation - learn about the platform and get your IoT projects running on ThingsBoard
+description: >-
+  ThingsBoard documentation - learn about the platform and get your IoT projects
+  running on ThingsBoard
 ---
 
-<p>The ThingsBoard documentation can help you set up ThingsBoard, learn about the platform and get your IoT projects running on ThingsBoard.</p>
+# index
 
-<a style="margin: 10px;" href="/docs/getting-started-guides/what-is-thingsboard/" class="button">ThingsBoard Overview</a>
-<a style="margin: 10px;" href="/docs/getting-started-guides/helloworld/" class="button">Getting started</a>
-<a style="margin: 10px;" href="/docs/guides/" class="button">&nbsp;&nbsp;&nbsp;Guides&nbsp;&nbsp;&nbsp;</a>
+The ThingsBoard documentation can help you set up ThingsBoard, learn about the platform and get your IoT projects running on ThingsBoard.
 
-<h2>Community Edition Features</h2>
+[ThingsBoard Overview](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/getting-started-guides/what-is-thingsboard/README.md) [Getting started](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/getting-started-guides/helloworld/README.md) [   Guides   ](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/guides/README.md)
 
-<ul>
-<li><b><a href="/docs/user-guide/attributes/">Attributes</a></b> - platform ability to assign custom key-value attributes to your entities (e.g configuration, data processing, visualization parameters).</li>
-<li><b><a href="/docs/user-guide/telemetry/">Telemetry</a></b> - API for collection of time-series data and related use cases.</li>
-<li><b><a href="/docs/user-guide/rpc/">Entities and relations</a></b> - platform ability to model physical world objects (e.g. devices and assets) and relations between them.</li>
-<li><b><a href="/docs/guides#AnchorIDDataVisualization">Data visualization</a></b> - covers data visualization capabilities: Widgets, Dashboards, Dashboard states.</li>
-<li><b><a href="/docs/user-guide/rule-engine-2-0/re-getting-started/">Rule engine</a></b> - covers data processing & actions on incoming telemetry and events.</li>
-<li><b><a href="/docs/user-guide/rpc/">RPC</a></b> - API and widgets to push commands from your apps and dashboards to devices and vice versa.</li>
-<li><b><a href="/docs/user-guide/audit-log/">Audit log</a></b> - tracking of user activity and API calls usage.</li>
-<li><b><a href="/docs/user-guide/api-limits/">API Limits</a></b> - controlling API usage, by limiting number of requests from single host during single time unit.</li>
-</ul>
+## Community Edition Features
 
-<h2>Professional Edition Features</h2>
+* [**Attributes**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/attributes/README.md) - platform ability to assign custom key-value attributes to your entities \(e.g configuration, data processing, visualization parameters\).
+* [**Telemetry**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/telemetry/README.md) - API for collection of time-series data and related use cases.
+* [**Entities and relations**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/rpc/README.md) - platform ability to model physical world objects \(e.g. devices and assets\) and relations between them.
+* [**Data visualization**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/guides/README.md#AnchorIDDataVisualization) - covers data visualization capabilities: Widgets, Dashboards, Dashboard states.
+* [**Rule engine**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/rule-engine-2-0/re-getting-started/README.md) - covers data processing & actions on incoming telemetry and events.
+* [**RPC**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/rpc/README.md) - API and widgets to push commands from your apps and dashboards to devices and vice versa.
+* [**Audit log**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/audit-log/README.md) - tracking of user activity and API calls usage.
+* [**API Limits**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/api-limits/README.md) - controlling API usage, by limiting number of requests from single host during single time unit.
 
-<ul>
-<li><b><a href="/docs/user-guide/white-labeling/">White-labeling</a></b> - configure your company or product logo, color scheme and mail tempates in 2 minutes.</li>
-<li><b><a href="/docs/user-guide/integrations/">Platform Integrations</a></b> - connect devices using connectivity solutions like NB IoT, LoRaWAN and SigFox, specific payload formats or various IoT Platforms</li>
-    <ul>
-        <li><b><a href="/docs/user-guide/integrations/http/">HTTP</a></b></li>
-        <li><b><a href="/docs/user-guide/integrations/mqtt/">MQTT</a></b></li>
-        <li><b><a href="/docs/user-guide/integrations/opc-ua/">OPC-UA</a></b></li>
-        <li><b><a href="/docs/user-guide/integrations/sigfox/">SigFox</a></b></li>
-        <li><b><a href="/docs/user-guide/integrations/thingpark/">ThingPark</a></b></li>
-        <li><b><a href="/docs/user-guide/integrations/ttn/">TheThingsNetwork</a></b></li>
-        <li><b><a href="/docs/user-guide/integrations/azure-event-hub/">Azure Event Hub</a></b></li>
-        <li><b><a href="/docs/user-guide/integrations/ibm-watson-iot/">IBM Watson IoT</a></b></li>
-        <li><b><a href="/docs/user-guide/integrations/aws-iot/">AWS IoT</a></b></li>
-    </ul>
-<li><b><a href="/docs/user-guide/groups/">Device & asset groups</a></b> - configure multiple custom device & asset groups.</li>
-<li><b><a href="/docs/user-guide/scheduler/">Scheduler</a></b> - schedule various types of events (i.e. configuration updates, report generation, rpc commands) with flexible configuration options.</li>
-<li><b><a href="/docs/user-guide/reporting/">Reporting</a></b> - generate reports using existing dashboards and distribute them to end-users via email.</li>
-<li><b><a href="/docs/user-guide/csv-xls-data-export/">CSV/XLS data export</a></b> - export data from widgets to CSV or XLS.</li>
-<li><b><a href="/docs/user-guide/file-storage/">File Storage</a></b> - ability to store binary content (files) in the DB.</li>
-</ul>
+## Professional Edition Features
 
-<h2>Security</h2>
+* [**White-labeling**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/white-labeling/README.md) - configure your company or product logo, color scheme and mail tempates in 2 minutes.
+* [**Platform Integrations**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/integrations/README.md) - connect devices using connectivity solutions like NB IoT, LoRaWAN and SigFox, specific payload formats or various IoT Platforms
+  * [**HTTP**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/integrations/http/README.md)
+  * [**MQTT**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/integrations/mqtt/README.md)
+  * [**OPC-UA**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/integrations/opc-ua/README.md)
+  * [**SigFox**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/integrations/sigfox/README.md)
+  * [**ThingPark**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/integrations/thingpark/README.md)
+  * [**TheThingsNetwork**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/integrations/ttn/README.md)
+  * [**Azure Event Hub**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/integrations/azure-event-hub/README.md)
+  * [**IBM Watson IoT**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/integrations/ibm-watson-iot/README.md)
+  * [**AWS IoT**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/integrations/aws-iot/README.md)
+* [**Device & asset groups**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/groups/README.md) - configure multiple custom device & asset groups.
+* [**Scheduler**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/scheduler/README.md) - schedule various types of events \(i.e. configuration updates, report generation, rpc commands\) with flexible configuration options.
+* [**Reporting**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/reporting/README.md) - generate reports using existing dashboards and distribute them to end-users via email.
+* [**CSV/XLS data export**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/csv-xls-data-export/README.md) - export data from widgets to CSV or XLS.
+* [**File Storage**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/file-storage/README.md) - ability to store binary content \(files\) in the DB.
 
-<p>Contains description of available device authentication <b><a href="/docs/user-guide/device-credentials/">options</a></b>.</p>
+## Security
 
-<h2>Samples</h2>
+Contains description of available device authentication [**options**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/user-guide/device-credentials/README.md).
 
-<p>Contains a list of hardware platform specific <b><a href="/docs/samples/">samples</a></b>.</p>
+## Samples
 
-<h2>API</h2>
+Contains a list of hardware platform specific [**samples**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/samples/README.md).
 
-<p>Contains a list of device connectivity and server-side platform specific <b><a href="/docs/samples/">API</a></b>.</p>
+## API
 
-<h2>IoT Gateway</h2>
+Contains a list of device connectivity and server-side platform specific [**API**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/samples/README.md).
 
-<p>Contains comprehensive documentation about ThingsBoard <b><a href="/docs/iot-gateway/">IoT Gateway</a></b>.</p>
+## IoT Gateway
 
-<h2>Video Tutorials</h2>
+Contains comprehensive documentation about ThingsBoard [**IoT Gateway**](https://github.com/caoyingde/thingsboard.github.io/tree/9437083b88083a9b2563248432cbbe460867fbaf/docs/iot-gateway/README.md).
 
-<p>The ThingsBoard Youtube <b><a href="https://www.youtube.com/channel/UCDb9fsV-YR4JmnipAMGsVAQ/videos">channel</a></b> contains useful video tutorials that cover various platform features.</p>
+## Video Tutorials
+
+The ThingsBoard Youtube [**channel**](https://www.youtube.com/channel/UCDb9fsV-YR4JmnipAMGsVAQ/videos) contains useful video tutorials that cover various platform features.
+

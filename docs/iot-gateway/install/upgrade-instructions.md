@@ -1,46 +1,21 @@
 ---
 layout: docwithnav
 assignees:
-- ikulikov
+  - ikulikov
 title: Upgrade instructions
-
 ---
 
-<ul id="markdown-toc">
-  <li>
-    <a href="#upgrading-to-110" id="markdown-toc-upgrading-to-110">Upgrading to 1.1.0</a>
-    <ul>
-        <li>
-            <a href="#ubuntucentos" id="markdown-toc-ubuntucentos">Ubuntu/CentOS</a>        
-        </li>
-        <li>
-            <a href="#windows" id="markdown-toc-windows">Windows</a>        
-        </li>
-    </ul>
-  </li>
-  <li>
-    <a href="#upgrading-to-120" id="markdown-toc-upgrading-to-120">Upgrading to 1.2.0</a>
-    <ul>
-        <li>
-            <a href="#ubuntucentos-1" id="markdown-toc-ubuntucentos-1">Ubuntu/CentOS</a>        
-        </li>
-        <li>
-            <a href="#windows-1" id="markdown-toc-windows-1">Windows</a>        
-        </li>
-    </ul>
-  </li>
-  <li>
-    <a href="#upgrading-to-121" id="markdown-toc-upgrading-to-121">Upgrading to 1.2.1</a>
-    <ul>
-        <li>
-            <a href="#ubuntucentos-2" id="markdown-toc-ubuntucentos-2">Ubuntu/CentOS</a>        
-        </li>
-        <li>
-            <a href="#windows-2" id="markdown-toc-windows-2">Windows</a>        
-        </li>
-    </ul>
-  </li>
-</ul>
+# upgrade-instructions
+
+*  [Upgrading to 1.1.0](upgrade-instructions.md#upgrading-to-110)
+  *  [Ubuntu/CentOS](upgrade-instructions.md#ubuntucentos)
+  *  [Windows](upgrade-instructions.md#windows)
+*  [Upgrading to 1.2.0](upgrade-instructions.md#upgrading-to-120)
+  *  [Ubuntu/CentOS](upgrade-instructions.md#ubuntucentos-1)
+  *  [Windows](upgrade-instructions.md#windows-1)
+*  [Upgrading to 1.2.1](upgrade-instructions.md#upgrading-to-121)
+  *  [Ubuntu/CentOS](upgrade-instructions.md#ubuntucentos-2)
+  *  [Windows](upgrade-instructions.md#windows-2)
 
 ## Upgrading to 1.1.0
 
@@ -50,17 +25,7 @@ These steps are applicable for 1.0.0 IoT Gateway version.
 
 #### Gateway package download
 
-{% capture tabspec %}tb-gateway-download-1-1-0
-tb-gateway-download-1-1-0-ubuntu,Ubuntu,shell,resources/1.1.0/tb-gateway-ubuntu-download.sh,/docs/iot-gateway/install/resources/1.1.0/tb-gateway-ubuntu-download.sh
-tb-gateway-download-1-1-0-centos,CentOS,shell,resources/1.1.0/tb-gateway-centos-download.sh,/docs/iot-gateway/install/resources/1.1.0/tb-gateway-centos-download.sh{% endcapture %}  
-{% include tabs.html %}
-
 #### Gateway service upgrade
-
-{% capture tabspec %}tb-gateway-installation-1-1-0
-tb-gateway-installation-1-1-0-ubuntu,Ubuntu,shell,resources/1.1.0/tb-gateway-ubuntu-installation.sh,/docs/iot-gateway/install/resources/1.1.0/tb-gateway-ubuntu-installation.sh
-tb-gateway-installation-1-1-0-centos,CentOS,shell,resources/1.1.0/tb-gateway-centos-installation.sh,/docs/iot-gateway/install/resources/1.1.0/tb-gateway-centos-installation.sh{% endcapture %}  
-{% include tabs.html %}
 
 #### Start the service
 
@@ -76,7 +41,7 @@ Download Gateway installation archive for Windows: [tb-gateway-windows-1.1.zip](
 
 #### Gateway service upgrade
 
-* Make a backup of previous Gateway configuration located in \<Gateway install dir\>\conf (for ex. C:\tb-gateway\conf).
+* Make a backup of previous Gateway configuration located in \\conf \(for ex. C:\tb-gateway\conf\).
 * Uninstall the previous version of Gateway service by running **uninstall.bat** located in Gateway install dir.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
@@ -84,9 +49,10 @@ Download Gateway installation archive for Windows: [tb-gateway-windows-1.1.zip](
 ```text
 C:\tb-gateway>uninstall.bat
 ```
+
 * Remove Gateway install dir.
 * Unzip installation archive to Gateway install dir.
-* Compare your old Gateway configuration files (from the backup you made in the first step) with new ones.
+* Compare your old Gateway configuration files \(from the backup you made in the first step\) with new ones.
 * Run **install.bat** script to install the new version of Gateway as a Windows service.
 
 ```text
@@ -107,17 +73,7 @@ These steps are applicable for 1.1.0 IoT Gateway version.
 
 #### Gateway package download
 
-{% capture tabspec %}tb-gateway-download-1-2-0
-tb-gateway-download-1-2-0-ubuntu,Ubuntu,shell,resources/1.2.0/tb-gateway-ubuntu-download.sh,/docs/iot-gateway/install/resources/1.2.0/tb-gateway-ubuntu-download.sh
-tb-gateway-download-1-2-0-centos,CentOS,shell,resources/1.2.0/tb-gateway-centos-download.sh,/docs/iot-gateway/install/resources/1.2.0/tb-gateway-centos-download.sh{% endcapture %}  
-{% include tabs.html %}
-
 #### Gateway service upgrade
-
-{% capture tabspec %}tb-gateway-installation-1-2-0
-tb-gateway-installation-1-2-0-ubuntu,Ubuntu,shell,resources/1.2.0/tb-gateway-ubuntu-installation.sh,/docs/iot-gateway/install/resources/1.2.0/tb-gateway-ubuntu-installation.sh
-tb-gateway-installation-1-2-0-centos,CentOS,shell,resources/1.2.0/tb-gateway-centos-installation.sh,/docs/iot-gateway/install/resources/1.2.0/tb-gateway-centos-installation.sh{% endcapture %}  
-{% include tabs.html %}
 
 #### Start the service
 
@@ -133,7 +89,7 @@ Download Gateway installation archive for Windows: [tb-gateway-windows-1.2.zip](
 
 #### Gateway service upgrade
 
-* Make a backup of previous Gateway configuration located in \<Gateway install dir\>\conf (for ex. C:\tb-gateway\conf).
+* Make a backup of previous Gateway configuration located in \\conf \(for ex. C:\tb-gateway\conf\).
 * Uninstall the previous version of Gateway service by running **uninstall.bat** located in Gateway install dir.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
@@ -141,9 +97,10 @@ Download Gateway installation archive for Windows: [tb-gateway-windows-1.2.zip](
 ```text
 C:\tb-gateway>uninstall.bat
 ```
+
 * Remove Gateway install dir.
 * Unzip installation archive to Gateway install dir.
-* Compare your old Gateway configuration files (from the backup you made in the first step) with new ones.
+* Compare your old Gateway configuration files \(from the backup you made in the first step\) with new ones.
 * Run **install.bat** script to install the new version of Gateway as a Windows service.
 
 ```text
@@ -164,17 +121,7 @@ These steps are applicable for 1.2.0 IoT Gateway version.
 
 #### Gateway package download
 
-{% capture tabspec %}tb-gateway-download-1-2-1
-tb-gateway-download-1-2-1-ubuntu,Ubuntu,shell,resources/1.2.1/tb-gateway-ubuntu-download.sh,/docs/iot-gateway/install/resources/1.2.1/tb-gateway-ubuntu-download.sh
-tb-gateway-download-1-2-1-centos,CentOS,shell,resources/1.2.1/tb-gateway-centos-download.sh,/docs/iot-gateway/install/resources/1.2.1/tb-gateway-centos-download.sh{% endcapture %}  
-{% include tabs.html %}
-
 #### Gateway service upgrade
-
-{% capture tabspec %}tb-gateway-installation-1-2-1
-tb-gateway-installation-1-2-1-ubuntu,Ubuntu,shell,resources/1.2.1/tb-gateway-ubuntu-installation.sh,/docs/iot-gateway/install/resources/1.2.1/tb-gateway-ubuntu-installation.sh
-tb-gateway-installation-1-2-1-centos,CentOS,shell,resources/1.2.1/tb-gateway-centos-installation.sh,/docs/iot-gateway/install/resources/1.2.1/tb-gateway-centos-installation.sh{% endcapture %}  
-{% include tabs.html %}
 
 #### Start the service
 
@@ -190,7 +137,7 @@ Download Gateway installation archive for Windows: [tb-gateway-windows-1.2.1.zip
 
 #### Gateway service upgrade
 
-* Make a backup of previous Gateway configuration located in \<Gateway install dir\>\conf (for ex. C:\tb-gateway\conf).
+* Make a backup of previous Gateway configuration located in \\conf \(for ex. C:\tb-gateway\conf\).
 * Uninstall the previous version of Gateway service by running **uninstall.bat** located in Gateway install dir.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
@@ -198,9 +145,10 @@ Download Gateway installation archive for Windows: [tb-gateway-windows-1.2.1.zip
 ```text
 C:\tb-gateway>uninstall.bat
 ```
+
 * Remove Gateway install dir.
 * Unzip installation archive to Gateway install dir.
-* Compare your old Gateway configuration files (from the backup you made in the first step) with new ones.
+* Compare your old Gateway configuration files \(from the backup you made in the first step\) with new ones.
 * Run **install.bat** script to install the new version of Gateway as a Windows service.
 
 ```text
@@ -212,3 +160,4 @@ C:\tb-gateway>install.bat
 ```text
 net start tb-gateway
 ```
+
